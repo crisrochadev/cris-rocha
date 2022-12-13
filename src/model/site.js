@@ -92,6 +92,128 @@ export default {
                             label: "Fale comigo",
                         }
                     ]
+                },
+                {
+                    id: 3,
+                    type: "acquirements",
+                    title: "Saiba um pouco sobre meus conhecimentos!",
+                    description: "Apesar de eu estar sempre me aprofundando em conhecimentos voltados a programação e também amar desenvolver no backend, meu foco principal é o frontend, mas precisamente javascript, onde eu tenho maior afinidade e dessa forma posso entregar trabalhos com qualidade!",
+                    cards:[
+                        {
+                            id:1,
+                            title:"HTML",
+                            level:95,
+                            icon:"html",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                        {
+                            id:2,
+                            title:"CSS",
+                            level:85,
+                            icon:"css",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                        {
+                            id:3,
+                            title:"Javascript",
+                            level:80,
+                            icon:"js",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                        {
+                            id:4,
+                            title:"Vue",
+                            level:95,
+                            icon:"vue",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                        {
+                            id:5,
+                            title:"React",
+                            level:80,
+                            icon:"react",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                        {
+                            id:6,
+                            title:"NextJs",
+                            level:60,
+                            icon:"next",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                        {
+                            id:7,
+                            title:"Tailwind",
+                            level:85,
+                            icon:"tailwind",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                        {
+                            id:8,
+                            title:"PHP",
+                            level:45,
+                            icon:"php",
+                            description:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci quod cum eveniet quibusdam mollitia? Ullam vitae possimus quisquam, beatae sunt blanditiis, delectus alias excepturi odio, voluptatum unde ipsa. Harum, deserunt!"
+                        },
+                    ],
+                    buttons:[
+                        {
+                            id:1,
+                            label:"Veja meu perfil no GitHub",
+                            icon:"fab fa-github",
+                            path:"https://github.com/crisrochadev"
+                        }
+                    ]
+                },
+                {
+                    id:5,
+                    type:"projects",
+                    title:"Veja os projetos recentes!",
+                    description: "Apesar de eu estar sempre me aprofundando em conhecimentos voltados a programação e também amar desenvolver no backend, meu foco principal é o frontend, mas precisamente javascript, onde eu tenho maior afinidade e dessa forma posso entregar trabalhos com qualidade!",
+                    projects:[
+                        {
+                            id:1,
+                            title:'Apesar de eu estar',
+                            tags:['php','html','css'],
+                            thumb:'banner_light.png',
+                            link:'/apesar-de-eu-estar'
+                        },
+                        {
+                            id:2,
+                            title:'Apesar de eu estar',
+                            tags:['js','html','css'],
+                            thumb:'banner_light.png',
+                            link:'/apesar-de-eu-estar'
+                        },
+                        {
+                            id:3,
+                            title:'Apesar de eu estar',
+                            tags:['react','html','css'],
+                            thumb:'banner_light.png',
+                            link:'/apesar-de-eu-estar'
+                        },
+                        {
+                            id:4,
+                            title:'Apesar de eu estar',
+                            tags:['vue','html','css'],
+                            thumb:'banner_light.png',
+                            link:'/apesar-de-eu-estar'
+                        },
+                        {
+                            id:5,
+                            title:'Apesar de eu estar',
+                            tags:['next','html','css'],
+                            thumb:'banner_light.png',
+                            link:'/apesar-de-eu-estar'
+                        },
+                        {
+                            id:5,
+                            title:'Apesar de eu estar',
+                            tags:['html','css'],
+                            thumb:'banner_light.png',
+                            link:'/apesar-de-eu-estar'
+                        }
+                    ]
                 }
             ]
         }

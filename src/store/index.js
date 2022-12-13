@@ -10,6 +10,8 @@ export const useSite = defineStore('site', {
     }),
     hero:() => site.pages.find(page => page.type == "home").children.find(child => child.type == "hero"),
     about:() => site.pages.find(page => page.type == "home").children.find(child => child.type == "about"),
+    acquirements:() => site.pages.find(page => page.type == "home").children.find(child => child.type == "acquirements"),
+    projects:() => site.pages.find(page => page.type == "home").children.find(child => child.type == "projects"),
     socialMedia:() => site.socialMedia,
     menu:() => site.menu,
 
