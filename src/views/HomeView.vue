@@ -1,10 +1,10 @@
 <template>
   <section class="w-full  relative">
     <HeroComponent/>
-    <AboutComponent class="relative separator after:blur after:bg-teal-50 after:z-50 before:blur before:bg-teal-50 before:z-50"/>
-    <AcquirementsComponent class="relative separator after:blur after:bg-cyan-50 after:z-50 before:blur before:bg-cyan-50 before:z-50"/>
-    <ProjectsComponent class="relative separator after:blur after:bg-teal-50 after:z-50 before:blur before:bg-teal-50 before:z-50"/>
-    <ContactComponent class="relative separator after:blur after:bg-cyan-50 after:z-50 before:blur before:bg-cyan-50 before:z-50"/>
+    <AboutComponent />
+    <AcquirementsComponent />
+    <ProjectsComponent/>
+    <ContactComponent />
   </section>
 </template>
 
@@ -21,7 +21,7 @@ import ContactComponent from '@/components/home/ContactComponent.vue';
     content:"";
     width:100%;
     height:30px;
-    top:-15px;
+    bottom:-15px;
     left:0;
     display: block;
     position: absolute;

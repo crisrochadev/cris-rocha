@@ -1,9 +1,9 @@
 <template>
     <section
     :style="{backgroundImage: 'url('+require('@/assets/images/'+image)+')'}"
-  class="flex relative items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img"
+  class="flex relative items-center justify-center py-8 -mt-1 -mb-1 h-auto bg-fixed bg-center bg-cover custom-img before:backdrop-blur-sm"
 >
-    <div class="relative z-20">
+    <div class="relative z-30">
         <slot></slot>
     </div>
   </section>
@@ -27,6 +27,7 @@ console.log(image)
     top:0;
     left:0;
     position: absolute;
+    z-index:2;
     background-color: rgba(255,255,255,.70);
 }
 </style>

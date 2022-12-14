@@ -1,5 +1,5 @@
 <template>
-  <p :class="['w-auto m-2 p-1 rounded font-thin text-xs backdrop-blur-md',...styleClass]">
+  <p :class="['w-auto m-2 py-1 px-2 rounded font-thin text-xs backdrop-blur-md ',...styleClass]" style="box-shadow:inset 0 0 4px rgba(0,0,0,.25)">
     <i :class="icon"></i>
     <span class="ml-2" v-html="message"></span>
   </p>
@@ -16,15 +16,15 @@ const icon = ref(getIcon())
 function getClassToStyle() {
   switch (type.value) {
     case "success":
-      return ["bg-green-100/[0.50]", "text-green-800"];
+      return ["bg-green-100/[0.25]", "text-green-800"];
     case "danger":
-      return ["bg-red-100/[0.50]", "text-red-800"];
+      return ["bg-red-100/[0.25]", "text-red-800"];
     case "info":
-      return ["bg-blue-100/[0.50]", "text-blue-800"];
+      return ["bg-blue-100/[0.25]", "text-blue-800"];
     case "alert":
-      return ["bg-yellow-100/[0.50]", "text-yellow-800"];
+      return ["bg-yellow-100/[0.25]", "text-yellow-800"];
     default:
-      return ["bg-pink-100/[0.50]", "text-pink-800"];
+      return ["bg-pink-100/[0.25]", "text-pink-800"];
   }
 }
 function getIcon() {

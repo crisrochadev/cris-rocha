@@ -1,5 +1,6 @@
 <template>
-  <section
+  <ParallaxComponent
+  image="banner_dark.png"
     id="conhecimentos"
     class="
       bg-cyan-50
@@ -17,26 +18,8 @@
       px-[10%]
     "
   >
-    <header>
-      <h1
-        class="
-          uppercase
-          text-cyan-700
-          font-bold
-          text-3xl
-          border-b
-          py-2
-          border-cyan-100
-          text-center
-        "
-      >
-        {{ acquirements.title }}
-      </h1>
-      <p class="text-center font-thin border-b py-2 border-cyan-100">
-        {{ acquirements.description }}
-      </p>
-    </header>
-    <section class="flex flex-wrap gap-2 justify-center items-center">
+    <HeaderComponent :data="acquirements" color="text-cyan-700"/>
+    <section class="flex flex-wrap gap-2 justify-center items-center bg-cyan-100/[0.25] backdrop-blur-sm rounded p-4 shadow-md ">
       <div class="flex items-center justify-center w-full gap-2 
             flex-wrap my-2">
         <article
@@ -95,16 +78,13 @@
             {{article.description}}
         </p>
       </article>
-      <button class="block float-right uppercase hover:underline text-cyan-500 mt-4">
-        <i class="fab fa-github animate-bounce mr-2"></i>
-        <span>Acesse meu github</span>
-        <i class="far fa-arrow-right ml-2"></i>
-      </button>
+      <ButtonComponent text="Acesse meu GitHub" color="text-cyan-500" icon="fab fa-github"/>
     </section>
-  </section>
+  </ParallaxComponent>
 </template>
 
 <script setup>
+import ButtonComponent from "@/components/globais/ButtonComponent.vue"
 //eslint-disable-next-line
 import { useSite } from "@/store";
 //eslint-disable-next-line
@@ -112,6 +92,8 @@ import { ref, defineAsyncComponent } from "vue";
 //eslint-disable-next-line
 import AlertMessageComponent from "@/components/globais/AlertMessageComponent.vue";
 import RadialProgress from "vue3-radial-progress";
+import ParallaxComponent from "./ParallaxComponent.vue";
+import HeaderComponent from "../globais/HeaderComponent.vue";
 const store = useSite();
 const acquirements = ref(store.acquirements);
 const article = ref(acquirements.value.cards[0]);

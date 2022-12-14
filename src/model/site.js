@@ -214,6 +214,29 @@ export default {
                             link:'/apesar-de-eu-estar'
                         }
                     ]
+                },
+                {
+                    id:6,
+                    type:"contact",
+                    title:"Entre em contato comigo!",
+                    description: "Existem algumas formas pelas quais podemos conversar, se você tem um projeto a ser desenvolvido, recomento que preencha o formulário abaixo, dessa forma agilizamos o processo!",
+                    description2:"Se preferir pode entrar em contato pelos seguintes canais de relacionamento.",
+                    buttons:[
+                        {
+                            id:1,
+                            label:'email',
+                            icon:'far fa-envelope',
+                            link:'crisrocha.dev@gmail.com',
+                            type:'icon'
+                        },
+                        {
+                            id:2,
+                            label:'whatsapp',
+                            icon:'whatsapp',
+                            type:'element',
+                            link:'https://wa.me/5547992321879?text=Ol%C3%A1%2C+vamos+conversar+sobre+um+projeto+front-end%3F'
+                        }
+                    ]
                 }
             ]
         }
