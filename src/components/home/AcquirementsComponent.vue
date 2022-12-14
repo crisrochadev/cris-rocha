@@ -11,14 +11,13 @@
       w-screen
       flex
       md:pt-0
-      pt-14
       justify-center
       items-center
       flex-col
       px-[10%]
     "
   >
-    <HeaderComponent :data="acquirements" color="text-cyan-700"/>
+    <HeaderComponent :data="acquirements" color="text-cyan-700" class="-mt-4"/>
     <section class="flex flex-wrap gap-2 justify-center items-center bg-cyan-100/[0.25] backdrop-blur-sm rounded p-4 shadow-md ">
       <div class="flex items-center justify-center w-full gap-2 
             flex-wrap my-2">

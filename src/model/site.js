@@ -219,7 +219,7 @@ export default {
                     id:6,
                     type:"contact",
                     title:"Entre em contato comigo!",
-                    description: "Existem algumas formas pelas quais podemos conversar, se você tem um projeto a ser desenvolvido, recomento que preencha o formulário abaixo, dessa forma agilizamos o processo!",
+                    description: "Existem algumas formas pelas quais podemos conversar, se você tem um projeto a ser desenvolvido, recomendo que preencha o formulário abaixo, dessa forma agilizamos o processo!",
                     description2:"Se preferir pode entrar em contato pelos seguintes canais de relacionamento.",
                     buttons:[
                         {
