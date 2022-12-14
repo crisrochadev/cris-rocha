@@ -7,7 +7,7 @@
             <p class="text-center font-thin border-b py-2 border-cyan-100">{{acquirements.description}}</p>
         </header>
         <section class="flex flex-wrap gap-2 justify-center items-center">
-            <div class="flex w-full overflow-x-auto gap-1 md:justify-center justify-start overflow-y-hidden">
+            <div class="flex w-full overflow-x-auto gap-1 md:justify-center justify-start overflow-y-hidden px-[10%]" >
                 <div
             @click="article = card"
             class="btn md:w-[100px] md:h-[100px] w-[50px] h-[50px] rounded my-4 cursor-pointer  hover:bg-cyan-200/[0.60] flex flex-col justify-center gap-2 items-center bg-cyan-100/[0.5] backdrop-blur-lg	"
@@ -21,7 +21,7 @@
                 </div>
             </div>
             </div>
-            <article>
+            <article class="px-[10%]">
                 <header class="flex gap-2">
                     <component :is="currentIconComponent(article.icon)" :props="{width:'25px',height:'25px'}" ></component>
                     <h1 class="uppercase font-bold text-xl text-cyan-500 border-b  pb-2">
