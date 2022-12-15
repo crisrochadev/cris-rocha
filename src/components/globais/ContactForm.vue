@@ -111,7 +111,7 @@
             "
             class="bg-teal-50 w-11/12 my-1 mx-auto rounded p-2 cursor-pointer hover:bg-teal-100 transition-colors ease-linear"
           >
-            {{ item.label }} pp
+            {{ item.label }}
           </li>
         </ul>
       </div>
