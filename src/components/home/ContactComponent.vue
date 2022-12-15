@@ -1,6 +1,6 @@
 <template>
   <ParallaxComponent image="banner_dark.png">
-    <div class="w-full px-[10%]">
+    <div id="contato" class="w-full px-[10%]">
       <HeaderComponent :data="contact" color="text-teal-700">
         <template #after-title>
           <div class="mx-auto flex justify-center items-center">
