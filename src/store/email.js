@@ -15,8 +15,7 @@ export const useEmail = defineStore("email", {
           {
             headers: {
               "accept": "application/json",
-              "api-key":
-                "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",
+              "api-key":process.env.VUE_APP_API_KEY_EMAIL,
               "content-type": "application/json",
             },
           }

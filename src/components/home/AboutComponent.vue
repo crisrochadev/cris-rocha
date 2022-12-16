@@ -2,7 +2,7 @@
   <div
     id="sobre"
     class="relative flex flex-col md:flex-row px-[10%] 
-  bg-teal-900/[0.25] py-8"
+  bg-teal-900/[0.25] py-8 min-h-screen"
   >
     <header
       class="md:w-2/4 w-full flex flex-col justify-center items-start md:mt-0 mt-8 relative z-20"
@@ -37,7 +37,7 @@
     <div
       class="relative  backdrop-blur-sm shadow-lg rounded bg-teal-100/[0.20]"
     >
-      <img src="@/assets/images/eusinha.png" class="relative z-20" />
+      <img src="@/assets/images/eusinha.png" class="relative z-20 w-full h-full object-cover" />
     </div>
   </div>
 </template>

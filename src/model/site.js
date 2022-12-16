@@ -31,7 +31,7 @@ export default {
         {
             id: 1,
             name: 'inicio',
-            path: ''
+            path: '#inicio'
         },
         {
             id: 2,

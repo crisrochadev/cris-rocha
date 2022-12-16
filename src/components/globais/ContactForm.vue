@@ -362,10 +362,11 @@ export default {
       const interval = setInterval(() => {
         percentLoading = percentLoading + 10;
         this.percentProgress = percentLoading;
-        console.log(percentLoading);
+        // console.log(percentLoading);
         if (percentLoading === 100) clearInterval(interval);
       }, 500);
       const result = await this.store.sendEmail(data);
+      // console.log(data)
       if (result.messageId) {
         //exibir Aleta
         this.firstName = "";
@@ -376,7 +377,7 @@ export default {
         this.projectType = { id: 122, label: null };
         this.layout = null;
 
-        this.alertText = "Email enviado com sucesso! Você será redirecionado!";
+        this.alertText = "Email enviado com sucesso! ogo entro em contato!";
         this.alertType = "success";
         this.showAlert = true;
         setTimeout(() => {

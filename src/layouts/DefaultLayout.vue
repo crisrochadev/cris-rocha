@@ -1,5 +1,8 @@
 <template>
 <section class="site w-screen h-screen overflow-hidden">
+   <header class="h-0 w-0 text-0 invisible">
+    <h1>Desenvolvedora front-end</h1>
+   </header>
    <div class="w-full h-8 shadow-sm flex justify-between items-center px-2 backdrop-blur-sm  absolute z-30">
         <nav class="w-full h-full z-30 flex justify-between items-center px-2">
             <button @click="toggleMenu = !toggleMenu" class="block md:hidden"><i class="far fa-bars text-teal-600"></i></button>
@@ -11,9 +14,12 @@
                 md:items-center
                 md:static
                 md:visible
+                md:backdrop-blur-none
+                md:shadow-none
                 md:bg-transparent
-                bg-cyan-200
-                shadow-sm
+                bg-cyan-10/[0.20]
+                backdrop-blur-md
+                shadow-md
                 w-screen
                 absolute
                 left-0
@@ -28,7 +34,7 @@
                     relative
                     md:w-auto
                 " v-for="item in menu" :key="item.id">
-                    <a class="ease-linear inline-block transition-colors w-full py-2 h-full capitalize hover:bg-teal-500/[0.30] text-teal-700 px-2" :href="item.path">{{item.name}}</a>
+                    <a class="ease-linear inline-block transition-colors text-xs w-full py-2 h-full uppercase hover:bg-teal-500/[0.30] text-teal-700 px-2" :href="item.path">{{item.name}}</a>
                 </li>
             </ul>
             <ul class="w-full h-full flex justify-end items-center">
