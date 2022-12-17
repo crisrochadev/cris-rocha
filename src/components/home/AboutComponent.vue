@@ -12,11 +12,11 @@
       >
         {{ data.title }}
       </h1>
-      <p class="font-thin w-11/12">{{ data.description }}</p>
+      <p class="font-thin w-11/12" v-html="data.description"></p>
       <div
         class="w-11/12 flex justify-end items-center gap-2 border-t border-teal-400 py-2 mt-4"
       >
-        <a href="{{Linkedin.path}}">
+        <a target="_blank" :href="data.buttons[0].url">
           <i
             :class="`fab fa-${Linkedin.icon} text-xl text-teal-600 hover:text-cyan-600 transition-color ease-linear`"
           />
@@ -24,7 +24,7 @@
             {{ Linkedin.class }}
           </span>
         </a>
-        <a href="{{GitHub.path}}">
+        <a target="_blank" :href="data.buttons[1].url">
           <i
             :class="`fab fa-${GitHub.icon} text-xl text-teal-600 hover:text-cyan-600 transition-color ease-linear`"
           />

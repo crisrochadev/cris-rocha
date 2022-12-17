@@ -25,16 +25,18 @@
         </h2>
         <div class="mt-4 flex gap-2">
           <button
-            class="btn backdrop-blur-sm bg-gradient-to-l drop-shadow-md hover:bg-gradient-to-r from-cyan-600 to-cyan-700 text-white rounded py-1 px-2 mx-1 uppercase text-sm"
+            class="btn backdrop-blur-sm py-1 bg-gradient-to-l drop-shadow-md hover:bg-gradient-to-r from-cyan-600 to-cyan-700 text-white rounded  px-2 mx-1 uppercase text-sm"
           >
-            {{ data.buttons[0].label }}
-          </button>
-          <button
+          <a
+            :href="getCurrentPath('#projetos')" > {{ data.buttons[0].label }}</a>
+        </button>
+          <a
+          :href="getCurrentPath('#contato')"
             class="hover:decoration-solid hover:underline py-1 fpx-2 mx-1 uppercase text-cyan-700 font-black flex items-center justify-center gap-2"
           >
             <span class="animate-bounce" v-html="whatsapp"></span>
             {{ data.buttons[1].label }}
-          </button>
+          </a>
         </div>
       </div>
     </header>
@@ -57,7 +59,11 @@ const whatsapp = ref(
 const store = useSite();
 const data = ref(store.hero);
 const site = ref(store.site);
-console.log(data.value);
+function getCurrentPath(uri){
+    let http = "https"
+    if(window.location.hostname.indexOf('localhost') !== -1) http = "http"
+    return  http + "://" + window.location.host  + uri
+}
 </script>
 <style>
 .btn:link,

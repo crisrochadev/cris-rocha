@@ -77,7 +77,7 @@
             {{article.description}}
         </p>
       </article>
-      <ButtonComponent text="Acesse meu GitHub" color="text-cyan-500" icon="fab fa-github"/>
+      <ButtonComponent text="Acesse meu GitHub" color="text-cyan-500" icon="fab fa-github" :url="acquirements.buttons[0].url"/>
     </section>
   </ParallaxComponent>
 </template>

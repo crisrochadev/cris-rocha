@@ -34,7 +34,7 @@
                     relative
                     md:w-auto
                 " v-for="item in menu" :key="item.id">
-                    <a class="ease-linear inline-block transition-colors text-xs w-full py-2 h-full uppercase hover:bg-teal-500/[0.30] text-teal-700 px-2" :href="item.path">{{item.name}}</a>
+                    <a class="ease-linear inline-block transition-colors text-xs w-full py-2 h-full uppercase hover:bg-teal-500/[0.30] text-teal-700 px-2" :href="getCurrentPath(item.path)">{{item.name}}</a>
                 </li>
             </ul>
             <ul class="w-full h-full flex justify-end items-center">
@@ -80,7 +80,13 @@ function isMobile() {
 
 // function pushPageByPath(p){
 //     console.log(p)
-// }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+// }  
+
+function getCurrentPath(uri){
+    let http = "https"
+    if(window.location.hostname.indexOf('localhost') !== -1) http = "http"
+    return  http + "://" + window.location.host  + uri
+}
 </script>
 <style scoped>
 /* .site{

@@ -1,5 +1,5 @@
 <template>
-  <p :class="['w-auto m-2 py-1 px-2 rounded font-thin text-xs backdrop-blur-md ',...styleClass]" style="box-shadow:inset 0 0 4px rgba(0,0,0,.25)">
+  <p :class="['w-auto inline-block py-1 px-2 rounded font-thin text-xs backdrop-blur-md ',...styleClass]" style="box-shadow:inset 0 0 4px rgba(0,0,0,.25)">
     <i :class="icon"></i>
     <span class="ml-2" v-html="message"></span>
   </p>

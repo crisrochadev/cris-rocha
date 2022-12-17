@@ -15,6 +15,9 @@ export const useSite = defineStore('site', {
     contact:() => site.pages.find(page => page.type == "home").children.find(child => child.type == "contact"),
     socialMedia:() => site.socialMedia,
     menu:() => site.menu,
+    project(){
+      return (proj) => site.projects.find(p => p.name == proj)
+    }
 
   },
   actions: {

@@ -1,15 +1,17 @@
 <template>
   <div
     id="projetos"
-    class="bg-teal-50  h-auto border md:pt-0 w-screen flex-wrap pb-8 pt-18 justify-center items-center flex px-[10%] bg-teal-900/[0.25] "
+    class="bg-teal-50 h-auto border md:pt-0 w-screen flex-wrap pb-8 pt-18 justify-center items-center flex px-[10%] bg-teal-900/[0.25]"
   >
- <div class="mt-8">
-  <HeaderComponent :data="data" color="text-teal-700"/>
-    <alert-message-component
-      type="info"
-      message="Clique na imagem para ver o projeto!"
-    />
- </div>
+    <div class="mt-8">
+      <HeaderComponent :data="data" color="text-teal-700" />
+      <div class="w-full flex justify-center mb-2">
+        <alert-message-component
+          type="info"
+          message="Clique na imagem para ver o projeto!"
+        />
+      </div>
+    </div>
     <section
       class="flex flex-wrap justify-center items-center gap-4 w-full md:mt-0 mt-12 mb-4"
     >
@@ -19,7 +21,9 @@
         class="border-teal-100 hover:opacity-100 btn opacity-80 rounded cursor-pointer backdrop-blur-sm w-52 h-52 shadow-lg"
         @click="getPageProject(project.link)"
       >
-        <header class="bg-teal-100/[0.40] px-1 absolute w-11/12 rounded backdrop-blur-sm shadow-md z-20 -bottom-2 left-2 ">
+        <header
+          class="bg-teal-100/[0.40] px-1 absolute w-11/12 rounded backdrop-blur-sm shadow-md z-20 -bottom-2 left-2"
+        >
           <h1 class="text-xs uppercase font-medium text-teal-700">
             {{ project.title }}
           </h1>
@@ -38,6 +42,7 @@
       text="Veja todos os projetos"
       icon="far fa-eye"
       color="text-teal-500"
+      url="/projetos"
     />
   </div>
 </template>
@@ -49,6 +54,7 @@ import ButtonComponent from "@/components/globais/ButtonComponent.vue";
 import { ref, defineAsyncComponent } from "vue";
 import AlertMessageComponent from "@/components/globais/AlertMessageComponent.vue";
 import HeaderComponent from "../globais/HeaderComponent.vue";
+import { useRouter } from "vue-router";
 
 const store = useSite();
 const data = ref(store.projects);
@@ -59,13 +65,17 @@ const data = ref(store.projects);
 //     )
 // }
 
+const router = useRouter();
 function getImgUrl(thumb) {
-  var images = require.context("@/assets/images/", false, /\.png$/);
+  var images = thumb.endsWith(".jpg")
+    ? require.context("@/assets/images/", false, /\.jpg$/)
+    : require.context("@/assets/images/", false, /\.png$/);
   return images("./" + thumb);
 }
 function getPageProject(link) {
-  console.log(link);
+  router.push({ path: link });
 }
+
 </script>
 
 <style lang="scss" scoped></style>

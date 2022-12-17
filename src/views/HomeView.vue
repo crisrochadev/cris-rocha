@@ -5,6 +5,7 @@
     <AcquirementsComponent />
     <ProjectsComponent/>
     <ContactComponent />
+    <FooterComponent />
   </section>
 </template>
 
@@ -14,6 +15,7 @@ import AboutComponent from '@/components/home/AboutComponent.vue';
 import AcquirementsComponent from '@/components/home/AcquirementsComponent.vue';
 import ProjectsComponent from '@/components/home/ProjectsComponent.vue';
 import ContactComponent from '@/components/home/ContactComponent.vue';
+import FooterComponent from '@/components/home/FooterComponent.vue';
 
 </script>
 <style>
